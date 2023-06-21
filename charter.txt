@@ -35,16 +35,17 @@ The TG aims to deliver:
   and enforce least privileged access to the TCB and privileged hardware
   resources by sandboxed code.
 
--  XXX Ravi and Deepak
+- An ISA spec with minimal ISA primitives required to implement and enforce HFI.
 
 - A non-normative security analysis document for implementers of this
   capability that describes platform recommendations.
 
-Development of these specifications will happen in collaboration with other
-SIGs/TGs, such as, Microarchitecture Side Channels, XXX Ravi and Deepak
+Development of these specifications will happen in collaboration with Security
+HC and other related SIGS (e.g. Runtime Integrity SIG) and TGs.
 
-As part of the DoD, the TG will create at least one open-source implementation.
-Including an HFI-enabled Wasm runtime, an HFI-enabled runtime for sandboxing
-native binaries, with supporting tools and test frameworks to validate the
-functional correctness of the implementations.  Any ISA proposals made will be
-modeled via tools such as QEMU/Spike to support the POC.
+As part of the definition of done (DoD), the TG will create at least one
+open-source implementation.  Including an HFI-enabled Wasm runtime, an
+HFI-enabled runtime for sandboxing native binaries, with supporting tools and
+test frameworks to validate the functional correctness of the implementations.
+Any ISA proposals made will be modeled via tools such as QEMU/Spike to support
+the POC.
