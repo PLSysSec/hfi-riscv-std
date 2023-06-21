@@ -21,7 +21,10 @@ C/C++ "native" code in existing applications and library ecosystems.  (2)
 Hardware assistance for software based isolation systems such as WebAssembly,
 and custom sandboxing systems (e.g v8's UberCage), that have significant
 performance, assurance, security (e.g. Spectre safety), and scalability
-limitations as a result of insufficient hardware support.
+limitations as a result of insufficient hardware support. (3) Hardware based 
+isolation of native binaries in contexts where software based isolation is
+used today such as nanoservice and serverless (edge and non-edge) settings, 
+safe extensibility, etc.
 
 The TG aims to deliver:
 
