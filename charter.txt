@@ -2,11 +2,11 @@ Hardware Assisted Fault Isolation (HFI) on the  RISC-V platforms
 
 Chairs: FILL ME IN
 
-Hardware Assisted Fault Isolation (HFI) defines mechanisms for enabling
-efficient fine grain isolation: including memory isolation, memory
-sharing, and interposition on privileged instructions within a common virtual
-address space. The terms sandboxing, compartmentalization, and in-process
-isolation are generally used for this class of technology.
+Hardware Assisted Fault Isolation (HFI) [1], defines mechanisms for enabling
+efficient fine grain isolation: including memory isolation, memory sharing, and
+interposition on privileged instructions within a common virtual address space.
+The terms sandboxing, compartmentalization, and in-process isolation are
+generally used for this class of technology.
 
 HFI is designed to support both unmodified existing native binaries, and
 hardware assisted isolation of "hybrid" workloads where there is a "sandboxing
@@ -49,3 +49,11 @@ HFI-enabled runtime for sandboxing native binaries, with supporting tools and
 test frameworks to validate the functional correctness of the implementations.
 Any ISA proposals made will be modeled via tools such as QEMU/Spike to support
 the POC.
+
+Bibliography:
+
+1. Going beyond the Limits of SFI: Flexible and Secure Hardware-Assisted
+In-Process Isolation with HFI.  Shravan Naryan, Tal Garfinkel, Mohammad kazem
+Tarak, Joey Rudek, Daniel Moghimi, Evan Johnson, Chris Fallin, Anjo
+Vahldiek-Oberwagner, Michael LeMay, Ravi Sahita, Dean Tullsen, Deian Stefan.
+ASPLOS 2023.
