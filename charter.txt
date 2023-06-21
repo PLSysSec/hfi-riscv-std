@@ -6,7 +6,7 @@ Hardware Assisted Fault Isolation (HFI) defines mechanisms for enabling
 efficient fine grain isolation: including memory isolation, memory
 sharing, and interposition on privileged instructions within a common virtual
 address space. The terms sandboxing, compartmentalization, and in-process
-isolation generally used for this class of technology.
+isolation are generally used for this class of technology.
 
 HFI is designed to support both unmodified existing native binaries, and
 hardware assisted isolation of "hybrid" workloads where there is a "sandboxing
