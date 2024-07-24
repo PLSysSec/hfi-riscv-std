@@ -1,6 +1,6 @@
 Hardware Assisted Fault Isolation (HFI) on the  RISC-V platforms
 
-Chairs: Tal?, +1 Someone from google (Samuel Gros)?
+Chairs: Tal?, +1 shr/Someone from google/someone from rivos?
 
 This TG will define the threat model and ISA for RISC-V Application
 Processors to enable efficient, fine-grain isolation within a common
