@@ -2,17 +2,14 @@ Hardware Assisted Fault Isolation (HFI) on the  RISC-V platforms
 
 Chairs: Tal Garfinkel, Ravi/Deepak
 
-This TG will define the threat model and ISA for RISC-V Application Processors
-to enable efficient, fine-grain isolation within a common virtual address space
-such that software can be restricted via hardware isolation for data accesses
-and code execution. This functionality is termed as Hardware-assisted Fault
-Isolation (HFI)[1]. The terms sandboxing, compartmentalization, and in-process
-isolation are also used for this type of capability.
+This TG will define the threat model and ISA for RISC-V processors to enable
+efficient, fine-grain isolation within a common virtual address space such that
+software can be restricted via hardware isolation for data accesses and code
+execution. This functionality is termed as Hardware-assisted Fault Isolation
+(HFI)[1]. The terms sandboxing, compartmentalization, and in-process isolation
+are also used for this type of capability.
 
-The TG will consider the following use-cases in the scope for the ISA. These are
-currently software-based isolation systems that are extremely multi-tenant and
-have significant performance, assurance, security (e.g. Spectre safety), and
-scalability limitations that current hardware cannot support. These include:
+The TG will consider the following use-cases in the scope for the ISA:
 
 1. Unmodified existing/legacy (legacy C/C++ "native" code) or new native
 binaries (such as serverless scenarios).
@@ -21,13 +18,18 @@ binaries (such as serverless scenarios).
 compiler") such as WebAssembly, v8's UberCage, or other custom software-based
 isolation schemes built in the future.
 
+These are currently software-based isolation systems that are extremely
+multi-tenant and have significant performance, assurance, security (e.g.
+ensuring Spectre attacks don't compromise isolation), and scalability
+limitations that current hardware cannot support.
+
 The TG aims to deliver:
 
 - A minimal ISA spec with primitives required to implement HFI. These primitives
 allow isolation by enforcing least-privilege access to data within the address
 space and efficient controlled-sharing between sandboxes. The ISA will enable
-HFI for userspace execution, with dependencies on other ISA (e.g. Sv, CFI)
-specified.
+HFI for same-mode execution (no mode transitions), with dependencies on other
+ISA (e.g. Sv, CFI) specified.
 
 - A non-ISA specification (ABI) between the runtime (TCB) and (sandboxed)
 non-TCB components, to manage sandbox interactions.
@@ -39,9 +41,10 @@ ISA security mechanisms if any, design patterns for software use etc.).
 Development of these specifications will happen in collaboration with Security
 HC, Runtime Integrity SIG and other related RVI and external open source work
 groups (e.g. WASM, v8). As part of the ratification, the TG will create at least
-one open-source implementation of an HFI-enabled runtime, with supporting tests
-to validate the functional correctness of the implementation. Any ISA proposed
-made will be modeled via tools such as QEMU/Spike to support the POC.
+one open-source implementation of an HFI-enabled runtime and compiler toolchain,
+with supporting tests to validate the functional correctness of the
+implementation. Any ISA proposed made will be modeled via tools such as
+QEMU/Spike to support the POC.
 
 Bibliography: [1] Going beyond the Limits of SFI: Flexible and Secure
 Hardware-Assisted In-Process Isolation with HFI.  Shravan Narayan et al. ASPLOS
