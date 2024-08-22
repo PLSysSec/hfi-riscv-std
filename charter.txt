@@ -1,6 +1,6 @@
 Hardware Assisted Fault Isolation (HFI) on the  RISC-V platforms
 
-Chairs: Tal Garfinkel, Ravi/Deepak
+Chairs: Tal Garfinkel (UC San Diego), Shravan Narayan (Individual)
 
 This TG will define the threat model and ISA for RISC-V processors to enable
 efficient, fine-grain isolation within a common virtual address space such that
