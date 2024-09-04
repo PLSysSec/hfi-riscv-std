@@ -1,2 +1,2 @@
 # hfi-riscv-std
-hfi riscv standard work
+Public HFI RISC-V Documents
